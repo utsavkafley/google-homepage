@@ -1,37 +1,62 @@
-
-
-
-/* HEADER */
-
-.google_logo{
-    max-width: 100px;
+body,html{
+    height: 100vh;
+}
+body{
+    display: grid;
+    gap: 10px 12px;
+    grid-template-columns: 12% 35% 35% auto auto;
+    grid-template-rows: 12% auto 15%;
+    grid-template-areas: 
+    "header header header header header"
+    ". content content . ."
+    ". footer footer . .";
 }
 
+
+
+
+/* ============================ HEADER ================== */
 header{
-    max-width:100%;
-    padding:20px;
-    border-bottom:1px solid rgb(219, 219, 219);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+    grid-area: header;
+    background-color: green;
+    display: grid;
+    gap: 10px 12px;
+    grid-template-columns: 12% 70% auto 10%;
+    grid-template-rows: 60% 30%;
+    grid-template-areas: 
+    "logo searchbar . icons"
+    ". nav . .";
+}
+
+.logo{
+    grid-area:logo;
+    background-color:rgb(126, 219, 38);
 }
 
 .searchbar{
-    width: 30%;
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-    border: 1px solid rgb(219, 219, 219);;
-    border-radius: 25px;
-    padding:7px;
+    grid-area:searchbar;
+    background-color:rgb(220, 223, 182);
 }
 
-.searchbar input{
-    width: 80%;
-    border:none;
+.icons{
+    grid-area: icons;
+    background-color:rgb(63, 186, 235);
 }
 
-.searchbar_icons{
-    color:grey;
+.navbar{
+    grid-area:nav;
+    background-color:rgb(175, 36, 230);
+}
+
+/* ============================ BODY ================== */
+.content{
+    grid-area: content;
+    background-color: indianred;
+    margin-right: 12px;
+}
+
+/* ============================ FOOOTER ================== */
+footer{
+    grid-area: footer;
+    background-color: gray;
 }
