@@ -7,7 +7,7 @@ body {
     display: grid;
     gap: 10px 12px;
     grid-template-columns: 12% 35% 35% auto auto;
-    grid-template-rows: 12% auto 15%;
+    grid-template-rows: 10% auto 15%;
     grid-template-areas: "header header header header header" ". content content . ." ". footer footer . .";
 }
 
@@ -16,7 +16,6 @@ body {
 
 header {
     grid-area: header;
-    background-color: green;
     display: grid;
     gap: 10px 12px;
     grid-template-columns: 12% 70% auto 10%;
@@ -24,6 +23,47 @@ header {
     grid-template-areas: "logo searchbar . icons" ". nav . .";
     margin-left: 6px;
     margin-right: -6px;
+    margin-top: 40px;
+}
+
+.logo {
+    display: grid;
+    grid-area: logo;
+    justify-items: center;
+    align-items: center;
+}
+
+.searchbar {
+    display: flex;
+    grid-area: searchbar;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    width: 60%;
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.4);
+}
+
+.searchbar img {
+    padding-left: 4px;
+}
+
+.searchInput {
+    width: 90%;
+    border: none;
+    height: 30px;
+    outline: none;
+}
+
+.icons {
+    display: flex;
+    grid-area: icons;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons img {
+    height: 20px;
+    padding-left: 20px;
 }
 
 .navbar {
@@ -33,21 +73,6 @@ header {
 
 .navbar li {
     display: inline;
-}
-
-.logo {
-    grid-area: logo;
-    background-color: rgb(126, 219, 38);
-}
-
-.searchbar {
-    grid-area: searchbar;
-    background-color: rgb(220, 223, 182);
-}
-
-.icons {
-    grid-area: icons;
-    background-color: rgb(63, 186, 235);
 }
 
 .pagination li {
